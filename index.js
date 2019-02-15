@@ -16,8 +16,8 @@ app.get('/', (request, response) => {
 })
 
 app.get('/irises', db.getIrises)
-
-app.get('/irises/:class', db.getIrisesByClass)
+app.get('/irises/search/class/:class', db.getIrisesByClass)
+app.get('/irises/search/location/:location', db.getIrisesByLocation)
 
 
 app.listen(port, () => {
