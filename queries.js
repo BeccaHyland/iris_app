@@ -27,7 +27,19 @@ const getIrisesByClass = (request, response) => {
                 })
 }
 
+const getIrisesByLocation = (request, response) => {
+  pool.query(`SELECT * FROM irises WHERE location=$1 ORDER BY id ASC`,
+              [request.params.location],
+                (error, results) => {
+                  if (error) {
+                    throw error
+                  }
+                  response.status(200).json(results.rows)
+                })
+}
+
 module.exports = {
   getIrises,
   getIrisesByClass,
+  getIrisesByLocation,
 }
