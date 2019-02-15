@@ -27,7 +27,12 @@ const getIrisesByClass = (request, response) => {
                 })
 }
 
+const getIrisesByLocation = (request, response) => {
+  
+}
+
 module.exports = {
   getIrises,
   getIrisesByClass,
+  getIrisesByLocation,
 }
