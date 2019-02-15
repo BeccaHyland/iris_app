@@ -17,6 +17,8 @@ app.get('/', (request, response) => {
 
 app.get('/irises', db.getIrises)
 
+app.get('/irises/:class', db.getIrisesByClass)
+
 
 app.listen(port, () => {
   console.log(`App running on port ${port}.`)
