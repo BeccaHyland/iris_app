@@ -1,0 +1,11 @@
+{
+  "name": "node-api-postgres",
+  "version": "1.0.0",
+  "description": "Node.js / Express SPA with a PostgreSQL database using the classic iris data set",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pg": "^7.8.0"
+  }
+}
