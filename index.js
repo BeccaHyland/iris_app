@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
+const db = require('./queries')
 
 app.use(bodyParser.json())
 app.use(
@@ -13,6 +14,8 @@ app.use(
 app.get('/', (request, response) => {
   response.json({ info: `Welcome to Becca's Iris app`})
 })
+
+app.get('/irises', db.getIrises)
 
 
 app.listen(port, () => {
