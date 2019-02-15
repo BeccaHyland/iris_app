@@ -11,7 +11,7 @@ app.use(
 )
 
 app.get('/', (request, response) => {
-  response.json({ info: 'Welcome to the Iris app'})
+  response.json({ info: `Welcome to Becca's Iris app`})
 })
 
 
