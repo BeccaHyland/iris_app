@@ -9,3 +9,12 @@ app.use(
     extended: true,
   })
 )
+
+app.get('/', (request, response) => {
+  response.json({ info: 'Welcome to the Iris app'})
+})
+
+
+app.listen(port, () => {
+  console.log(`App running on port ${port}.`)
+})
